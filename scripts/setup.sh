@@ -2,7 +2,7 @@ set -e
 for d in /var/www/antonio-casolino.1wp.site "$HOME/antonio-casolino.1wp.site" "$HOME"; do [ -f "$d/wp-config.php" ] && cd "$d" && break; done
 echo "dir: $(pwd)"
 mkdir -p wp-content/mu-plugins
-curl -fsSL https://raw.githubusercontent.com/a-casolino/acasolino.com/wordpress/mu-plugins/acasolino-progetti.php -o wp-content/mu-plugins/acasolino-progetti.php
+curl -fsSL https://raw.githubusercontent.com/a-casolino/acasolino.com/main/mu-plugins/acasolino-progetti.php -o wp-content/mu-plugins/acasolino-progetti.php
 wp language core install it_IT --activate
 wp option update timezone_string Europe/Rome
 wp option update date_format 'j F Y'
